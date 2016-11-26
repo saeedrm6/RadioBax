@@ -1,0 +1,720 @@
+/*
+Theme Name: Radio Bax
+Theme URI: http://Radiobax.com/
+Author: Saeed Rahimi Manesh
+Author URI: http://Rahimimanesh.com
+Description: Radio BAX provides you the largest and best collection of Persian and Iran music. The latest hits, favorite artists, and classics just for you
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: radio-bax
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Radio Bax is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Asides
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+@font-face{
+	font-family: 'yekan';
+	src:url('fonts/byekan.woff')format('woff');
+}
+
+body{
+	background: url('images/background.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+}
+.yek{
+	font-family: 'yekan';
+}
+.custom1{
+	background: #e74c3c;
+	color: #ecf0f1;
+	padding: 3px;
+	text-decoration: none;
+	font-style: bold;
+	font-size: 18px;
+	border-radius: 3px;
+}
+.custom2{
+	border-radius: 15px;
+	color: #ecf0f1;
+	padding: 0 15px;
+	direction: rtl;
+	font-family: 'yekan';
+	width: 100%;
+	background: #6e6c6c;
+	outline: 0;
+	border: 1px solid #6e6c6c;
+	background: url('images/search.png') 3% no-repeat;
+}
+.custom3{
+	color: #444 !important;
+}
+.custom2:focus{
+	outline: 0;
+}
+.social ul li{
+	list-style: none;
+	float: right;
+	padding: 4px 9px;
+	color: #fff;
+}
+.social ul li a{
+	color: #fff;
+}
+.social ul li a:hover{
+	color: #c0392b;
+	transition:all .2s ease-in-out;
+	-o-transition:all .2s ease-in-out;
+	-webkit-transition:all .2s ease-in-out;
+	-moz-transition:all .2s ease-in-out;
+}
+.navbarr{
+	background: rgba(52, 73, 94,0.8);	
+	border-top-right-radius: 11px;
+	border-top-left-radius: 11px;
+	color: #fff;
+	margin-top: 15px;
+}
+#footer{
+	background: rgba(52, 73, 94,0.8);
+	min-height: 220px;
+	height: auto;
+	border-bottom-right-radius: 11px;
+	border-bottom-left-radius: 11px;
+}
+.dirltr{
+	direction: ltr;
+}
+.dirrtl{
+	direction: rtl;
+}
+.navbar ul li {
+	float: right;
+	list-style: none;
+	font-family: 'yekan';
+	/*padding: 5px 15px;*/
+	padding: 5px;
+	color: #fff;
+}
+.navbar ul li a{
+	color: #fff;
+	text-decoration: none;	
+}
+.navbar{
+	margin-bottom: 0px !important;
+}
+.navbar ul li:hover{
+	transition:all .2s ease-in-out;
+	-o-transition:all .2s ease-in-out;
+	-webkit-transition:all .2s ease-in-out;
+	-moz-transition:all .2s ease-in-out;
+	-webkit-transform: rotate(5deg); /* Safari */
+	transform: rotate(5deg);
+	-moz-transform: rotate(5deg); /* Safari */
+	-o-transform: rotate(5deg); /* Safari */
+    -ms-transform: rotate(5deg);
+}
+.navbar ul li a:hover{
+	color: #95a5a6;
+	transition:all .2s ease-in-out;
+	-o-transition:all .2s ease-in-out;
+	-webkit-transition:all .2s ease-in-out;
+	-moz-transition:all .2s ease-in-out;
+	-webkit-transform: rotate(5deg); /* Safari */
+	-moz-transform: rotate(5deg); /* Safari */
+	-o-transform: rotate(5deg); /* Safari */
+    transform: rotate(5deg);
+}
+
+
+
+#myslider{
+	width: 100%;
+
+}
+#ads{
+	width: 100%;
+	height: auto;
+	/* min-height: 150px; */
+	background-color: #333;
+
+
+}
+#ads img{
+	margin: 15px auto;
+}
+.ads-detail{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	padding: 20px 150px;
+}
+.ads-detail h3{
+	font-size: 24px;
+	background: rgba(127, 140, 141,0.7);;
+	padding: 6px;
+	border-radius: 9px;
+}
+.ads-detail a{
+	color: #fff;
+	text-decoration: none;
+}
+.ads-detail a:hover{
+	color: #fff;
+	text-decoration: none;
+	text-shadow: 1px 1px #fff;
+}
+#music{
+	width: 100%;
+	height: auto;
+	min-height: 150px;
+	background: #DDD;
+}
+.title-music{
+	color: #444;
+	text-shadow: 1px 1px #444;
+}
+.pod-vid-title{
+	text-shadow: 1px 1px #fff;
+}
+#video{
+	width: 100%;
+	height: auto;
+	min-height: 150px;
+	background: #666;
+}
+#podcast{
+	width: 100%;
+	height: auto;
+	min-height: 150px;
+	background-color: #444;
+
+	/*background: url('images/627838-BT-products.jpg') no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;*/
+	
+
+	
+}
+#music-detail{
+	margin-top: 10px 0;
+}
+#music-detail p{
+	color: #444;
+	font-family: 'yekan';
+	text-align: justify;
+	padding: 5px 3px;
+}
+#video-detail{
+	margin-top: 10px 0;
+}
+#podcast-detail{
+	margin-top: 10px 0;
+}
+#facebook:hover{
+	color: #3498db;
+	transition:all .2s ease-in-out;
+	-o-transition:all .2s ease-in-out;
+	-webkit-transition:all .2s ease-in-out;
+	-moz-transition:all .2s ease-in-out;
+}
+#twitter:hover{
+	color: #2980b9;
+	transition:all .2s ease-in-out;
+	-o-transition:all .2s ease-in-out;
+	-webkit-transition:all .2s ease-in-out;
+	-moz-transition:all .2s ease-in-out;
+}
+#instagram:hover{
+	color: #b28265;
+	transition:all .2s ease-in-out;
+	-o-transition:all .2s ease-in-out;
+	-webkit-transition:all .2s ease-in-out;
+	-moz-transition:all .2s ease-in-out;
+}
+#youtube:hover{
+	color: #c0392b;
+	transition:all .2s ease-in-out;
+	-o-transition:all .2s ease-in-out;
+	-webkit-transition:all .2s ease-in-out;
+	-moz-transition:all .2s ease-in-out;
+}
+#telegram:hover{
+	color: #3498db;
+	transition:all .2s ease-in-out;
+	-o-transition:all .2s ease-in-out;
+	-webkit-transition:all .2s ease-in-out;
+	-moz-transition:all .2s ease-in-out;
+}
+.item a , .item a:hover{
+	text-decoration: none;
+	color: rgba(236, 240, 241,1.0);
+}
+.item{
+	max-width: 200px;
+	overflow: hidden;
+}
+.item img{
+	max-width: 200px;
+	height: 175px;
+	width: 200px;
+	-webkit-transition: all 1s ease; /* Safari and Chrome */
+    -moz-transition: all 1s ease; /* Firefox */
+    -ms-transition: all 1s ease; /* IE 9 */
+    -o-transition: all 1s ease; /* Opera */
+    transition: all 1s ease;
+}
+.item:hover img{
+	-webkit-transform:scale(1.25); /* Safari and Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+     transform:scale(1.25);
+}
+.podcast-detail-size{
+	font-size: 16px;
+	padding: 0 4px;
+}
+.podcast-inf{
+	font-size: 14px;
+	color: #fff;
+}
+.entry{
+	position: absolute;
+	z-index: 99;
+	bottom: 0px;
+	background: rgba(127, 140, 141,0.5);	
+	width: 100%;
+}
+.item:hover > .entry {
+	background: rgba(127, 140, 141,0.9);
+	transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+
+}
+.podcast-info{
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #000;
+	background: rgba(192, 57, 43,0.6);
+	margin: 5px;
+	border-radius: 5px;
+	padding: 2px;
+}
+.music-info{
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #000;
+	background: rgba(52, 73, 94,0.6);
+	margin: 5px;
+	border-radius: 5px;
+	padding: 2px;
+}
+.video-info{
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: #000;
+	background: rgba(52, 152, 219,0.6);
+	margin: 5px;
+	border-radius: 5px;
+	padding: 2px;
+}
+.item{
+	width: 200px;
+	margin-bottom: 20px;
+}
+.col-mmm-12{
+  position: relative;
+  min-height: 1px;
+  padding-right: 0px;
+  padding-left: 0px;
+}
+.col-mmm-12{
+  position: relative;
+  min-height: 1px;
+  padding-right: 0;
+  padding-left: 0;
+  clear: both;
+}
+.col-xss-12{
+	position: relative;
+  min-height: 1px;
+  padding-right: 0;
+  padding-left: 0;
+  clear: both;
+}
+#footer ul{
+	float: right;
+}
+#footer ul li{
+	float: right;
+	display: inline-block;
+	list-style: none;
+	padding: 5px 15px;
+	font-family: 'yekan';
+}
+#footer ul li a{
+	color: #fff;
+}
+#footer ul li a:hover{
+	text-decoration: none;
+	text-shadow: 1px 1px #fff;
+}
+.saeed{
+	font-size: 14px;
+}
+.saeed:hover{
+	text-shadow: 1px 1px #fff;
+}
+#hrr{
+	border: 1px ridge rgba(241, 196, 15,1.0);
+}
+#gavanin{
+	font-family: 'yekan';
+	text-align: justify;
+	font-size: 12px;
+	text-shadow:1px 1px #000;
+}
+.star img{
+	box-shadow: none !important;
+}
+
+.cover-img img{
+	max-width: 200px;
+	max-height: 200px;
+	box-shadow: 7px 5px rgba(189, 195, 199,0.6);
+	border-radius: 5px; 
+}
+.cover-img img:hover{
+	opacity: 0.8;
+	transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-webkit-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+}
+#music2{
+	padding: 15px 0;
+	width: 100%;
+	height: auto;
+	min-height: 150px;
+	background: #DDD;
+}
+#video2{
+	padding: 15px 0;
+	width: 100%;
+	height: auto;
+	min-height: 150px;
+	background: #DDD;
+}
+.mp3-details{
+	float: right;
+	direction: rtl;
+	color: #444;
+	width: 100%;
+}
+.mp3-details ul{
+	display: inline-flex;
+    clear: both;
+    padding: 5px;
+}
+.cover-img{
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.zrp{
+	list-style: none;
+}
+.rmp{
+	float: right;
+	display: inline-block;
+	list-style: none;
+	padding: 5px 10px; 
+}
+#playy{
+	font-size: 70px;
+}
+.playyy{
+	font-size: 40px;
+}
+.playyyy{
+	font-size: 15px;
+}
+#myplayer{
+	position: relative;
+    padding: 15px 0;
+    float: left;
+    left: 0;
+}
+#song-det{
+	list-style: none;
+	font-family: 'yekan';
+	font-style: 15px;
+	display: table-cell;
+}
+.eyesigh{
+	position: absolute;
+	color: #fff;
+	background: rgba(127, 140, 141,0.7);
+	padding: 5px;
+	border-radius: 5px;
+	top: 0;
+    left: 0;
+    margin: 10px 15px;
+visibility: hidden;
+}
+#download{
+	padding-top: 26px;
+
+}
+#download button{
+	margin-bottom: 5px;
+}
+.zip{
+	padding: 6px 32px;
+}
+.tahoma{
+	font-family: tahoma;
+}
+.btn-default{
+	background-color: rgba(0,0,0,0.1) !important;
+	color: #34495e !important;
+}
+.btn-default:hover{
+	background-color: #16a085 !important;
+	color: #fff !important;
+	transition:all .2s ease-in-out;
+	-o-transition:all .2s ease-in-out;
+	-webkit-transition:all .2s ease-in-out;
+	-moz-transition:all .2s ease-in-out;
+}
+.zip{
+	padding: 6px 30px !important;
+}
+#text-ahang{
+	color: #444;
+}
+.star li{
+	list-style: none;
+	float: right;
+	display: inline-block;
+	padding: 0 2px;
+}
+.star{
+	padding: 0 55px;
+}
+.video-inf{
+	color: #444;
+}
+#playy-v{
+	font-size:44px; 
+}
+.playyy-v{
+	font-size: 20px;
+}
+#ads img:hover{
+	opacity: 0.7;
+	transition:all .2s ease-in-out;
+	-o-transition:all .2s ease-in-out;
+	-webkit-transition:all .2s ease-in-out;
+	-moz-transition:all .2s ease-in-out;
+}
+.wp-pagenavi a, .wp-pagenavi span {
+    background: #7f8c8d;
+    padding: 7px;
+    float: right;
+    color: #FDFDFD;
+    margin: 2px;
+    font-family: 'yekan';
+    border-radius: 5px;
+}
+.wp-pagenavi span.current {
+    background: #27AE60;
+}
+.wp-pagenavi a, .wp-pagenavi span {
+    background: #7f8c8d;
+    padding: 7px;
+    float: right;
+    color: #FDFDFD;
+    margin: 2px;
+}
+.wp-pagenavi a:hover{
+	text-decoration: none;
+	color: #444;
+}
+.red{
+	color: #c0392b !important;
+}
+.green{
+	color: #16a085 !important;
+}
+video img{
+	max-width: 560px;
+	max-height: 328px;
+}
+.screen-reader-text{
+	display: none;
+}
+#searchsubmit{
+	display: none;
+}
+#searchform input{
+	border-radius: 15px;
+	color: #ecf0f1;
+	padding: 0 15px;
+	direction: rtl;
+	font-family: 'yekan';
+	width: 100%;
+	background: #6e6c6c;
+	outline: 0;
+	border: 2px solid #fbfcfc;
+	background: url('images/search.png') 3% no-repeat;
+}
+#music-detail #s{
+	color: #444 !important;
+}
+.ms-parent-id-1{
+	max-width: 100% !important;
+}
+.ms-layer{
+	font-family: 'yekan';
+	font-size: 25px;
+	background:#c0392b;
+	padding: 5px 10px;
+	border-radius: 5px;
+}
+.navbar-inverse {
+	background-color: transparent !important;
+	border-color: transparent !important;
+}
+.navbar-default {
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+.custm-nav{
+padding: 20px 0;
+}
+.custm-nav li a{
+	color: #fff!important;
+}
+#Brandd{
+	font-family: 'yekan';
+	color: #fff;
+	float: right;
+	visibility:hidden;
+}
+.noti li{
+	direction: rtl;
+	text-align: right;
+	font-family: 'yekan';
+}
+.coustem10{
+	padding: 1px;
+}
+#myslider div div ul li div{
+font-family:'yekan' !important;
+/*background: #c0392b;*/
+border-radius: 5px;
+color:#fff;
+}
+
+.panel-grid h2{
+    color: #000 !important;
+    font-family: 'yekan' !important;
+    font-size: 15px !important;
+    background: #DDD !important;
+}
+.singers img{
+    max-width:100%;
+    border-radius: 50%;
+}
+.singers img:hover{
+
+     webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    transition: all 1s ease;
+
+    -webkit-transform:scale(1.25); /* Safari and Chrome */
+    -moz-transform:scale(1.25); /* Firefox */
+    -ms-transform:scale(1.25); /* IE 9 */
+    -o-transform:scale(1.25); /* Opera */
+     transform:scale(1.25);
+}
+.singers h2{
+    text-align: center;
+}
+.mybuttons img{
+	border-radius:5px;
+	padding : 3px 0;
+}
+#rev_slider_1_1_wrapper{
+	background-color: transparent !important;
+}
+#anetwork{
+	text-align: center;
+	overflow: hidden;
+}
+#anetwork img{
+	max-width:100%;
+}
+.dynamicad-main img{
+	max-width:100%;
+}
+#seoh a{
+	color: #DDD !important;
+	text-decoration: none !important;
+	
+}
+#seoh a:hover{
+	color: #DDD !important;
+	text-decoration: none !important;
+	
+}
